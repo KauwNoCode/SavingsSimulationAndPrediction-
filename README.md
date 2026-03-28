@@ -19,7 +19,7 @@ Simulation of financial asset evolution and investment strategies, combined with
 ```
 SavingsSimulationAndPrediction/
 │
-├── DataCs/                    # CSV files for financial assets & S&P 500 descriptive variables
+├── DataCsv/                    # CSV files for financial assets & S&P 500 descriptive variables
 │
 ├── PyData/                    # Python scripts for data acquisition
 │   ├── yfinanceDATA.py        # Fetches monthly OHLCV data for multiple assets (yfinance)
@@ -64,7 +64,7 @@ Three predictive approaches tested for monthly S&P 500 trend classification:
 |---|---|
 | Multiple Regression | Underperformed (R² ≈ -2%) |
 | Logistic Regression | Underperformed (AUC ≈ 0.49) |
-| **Random Forest** | **Best performance** |
+| **Random Forest** | **Best performance** ≈77%, (OOB ≈ 31%)|
 
 The Random Forest model predicts whether the S&P 500 will rise or fall each month using lagged macro variables (VIX, momentum, spreads, Fed rate, CPI, unemployment, etc.).
 
@@ -72,7 +72,7 @@ The Random Forest model predicts whether the S&P 500 will rise or fall each mont
 
 ## Data Description
 
-- **`DataCs/`** — CSV files for SNP500, CAC40, Gold, BTC and macro variables
+- **`DataCsv/`** — CSV files for SNP500, CAC40, Gold, BTC and macro variables
 - **`PyData/yfinanceDATA.py`** — Monthly OHLCV data from first available date to today for each asset
 - **`PyData/RecupDataSNP500.py`** — Extended S&P 500 dataset including macro and sentiment variables via FRED API
 
@@ -121,7 +121,7 @@ Open `HtmlWS/SimulationImmob.html` or `HtmlWS/PortfolioSimulator.html` directly 
 
 ## Notes
 
-- Ensure all CSV files in `DataCs/` are generated before running R scripts
+- Ensure all CSV files in `DataCsv/` are generated before running R scripts
 - The Random Forest model uses a chronological 80/20 train/test split (no data leakage)
 - All macro variables are lagged by 1 month to avoid look-ahead bias
 - Web applications are fully standalone HTML files with no dependencies to install
