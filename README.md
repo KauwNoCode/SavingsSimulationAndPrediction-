@@ -1,6 +1,6 @@
 # SavingsSimulationAndPrediction
 
-Simulation of financial asset evolution and investment strategies, combined with a predictive model for monthly S&P 500 trends using Random Forest.
+Simulation of financial asset evolution and investment strategies, combined with a predictive model for monthly S&P 500 trends using Random Forest and Gradient Boosting (XGBoost).
 
 ---
 
@@ -30,7 +30,8 @@ SavingsSimulationAndPrediction/
 │   └── PortfolioSimulator.html # Multi-asset portfolio simulator
 │
 ├── Epargne.Rmd                # R Markdown — asset evolution & savings visualization
-├── ModelMultiple.Rmd          # R Markdown — S&P 500 predictive modeling
+├── ModelMultipleReg.Rmd          # R Markdown — S&P 500 predictive modeling (multiple + log reg)
+├── ModelMultipleReg.Rmd          # R Markdown — S&P 500 predictive modeling (multiple + log reg)
 └── README.md
 ```
 
