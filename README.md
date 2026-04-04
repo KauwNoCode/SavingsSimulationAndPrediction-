@@ -17,7 +17,6 @@ Simulation of financial asset evolution and investment strategies, combined with
 
 ## Project Structure
 SavingsSimulationAndPrediction/
-│
 ├── DataCsv/                        # CSV files for financial assets & S&P 500 descriptive variables
 │
 ├── PyData/                         # Python scripts for data acquisition
